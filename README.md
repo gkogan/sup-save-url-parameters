@@ -67,9 +67,7 @@ queryForm({reset: true});
 ```
 This form has only one field that is visible. However, if any of the visited URLs during the visitor's session had URL paramaters matching `utm_medium`, `utm_campaign`, or `utm_source`, the values of those parameters will be submitted with the form.
 
-If the a visitor landed on...
-```https://www.example.com/?utm_source=google&utm_medium=cpc&utm_campaign=summer-promotion```
-... then navigated to other pages, then finally submitted this form with their email, you would also see the values `google`, `cpc`, and `summer-promotion` in the form submission.
+If the a visitor landed on `https://www.example.com/?utm_source=google&utm_medium=cpc&utm_campaign=summer-promotion`, then navigated to other pages, then finally submitted this form with their email, you would also see the values `google`, `cpc`, and `summer-promotion` in the form submission.
 
 ## Contact
 Twitter: [@grigoriy_kogan](https://twitter.com/grigoriy_kogan)
