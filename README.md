@@ -15,13 +15,13 @@ Some analytics tools can recognize and report on some or all URL parameters, but
 
 There exist many similar scripts that capture UTM tags (utm_medium, etc) but not any custom parameters. They are not helpful if you want to track a custom parameter such as `referral`, `promo`, `ref`, `search`, and so on.
 
-This script captures and saves *any* parameter in the URL, then inserts the value of that parameter into *any* form on your site that has a `name` and `ID` that matches the parameter key. You can make the form field hidden since it is filled in automatically and does not need any input from the visitor.
+This script captures and saves *any* parameter in the URL, then inserts the value of that parameter into *any* form on your site that has a `name` that matches the parameter key. You can make the form field hidden since it is filled in automatically and does not need any input from the visitor.
 
 ## How
 
 1. Make sure jQuery is loaded on your site.
 2. Add the following code to every page on your site where you want to capture URL parameters or insert them into forms. Just before the </body> tag would be a good place.
-3. Add a form field and give it a `name` and `id` attribute that matches the URL parameter whose value you want to capture.
+3. Add a form field and give it a `name` attribute that matches the URL parameter whose value you want to capture.
 
 ```
 
@@ -52,9 +52,9 @@ queryForm({reset: true});
   <form action="#" enctype="text/plain">
     <label for="email">Email</label>
     <input type="email" name="email" placeholder="Email" required>
-    <input type="hidden" name="utm_source" id="utm_source" value="">
-    <input type="hidden" name="utm_medium" id="utm_medium" value="">
-    <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+    <input type="hidden" name="utm_source" value="">
+    <input type="hidden" name="utm_medium" value="">
+    <input type="hidden" name="utm_campaign" value="">
     <input type="submit" value="Submit">
   </form>
 
