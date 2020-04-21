@@ -1,6 +1,10 @@
 # Sup.js: Save URL Parameters
 SUP (Save URL Parameters) is a script that lets you save URL parameters and values in a visitor's session, then insert them into any form the visitor submits during their session.
 
+[See demo&rarr;](https://www.gkogan.co/resources/sup-demo/?utm_source=test-source&utm_medium=test-medium&utm_campaign=awesome-campaign&referral-code=04820&randomParameter=howdy)
+
+See longer article with background and examples: [Get URL + UTM Parameters with Javascript](https://www.gkogan.co/blog/save-url-parameters/).
+
 ## Why
 
 Adding parameters (or queries) to a URL can provide additional information about website visitors, such as:
@@ -19,16 +23,12 @@ This script captures and saves *any* parameter in the URL, then inserts the valu
 
 ## How
 
-1. Make sure jQuery is loaded on your site.
-2. Add the following code to every page on your site where you want to capture URL parameters or insert them into forms. Just before the </body> tag would be a good place.
-3. Add a form field and give it a `name` attribute that matches the URL parameter whose value you want to capture.
+1. Add the following code to every page on your site where you want to capture URL parameters or insert them into forms. Just before the </body> tag would be a good place.
+2. Add a form field and give it a `name` attribute that matches the URL parameter whose value you want to capture.
 
 ```
 
 <script src="path-to-script/sup.min.js"></script>
-<script>
-queryForm();
-</script>
 
 ```
 
@@ -36,13 +36,7 @@ queryForm();
 
 That's it!
 
-If you want to reset (clear) saved paramater values after the visitor submits a form, you can add `{reset: true}` to the function like so:
-
-```
-<script>
-queryForm({reset: true});
-</script>
-```
+If you want to reset (clear) saved paramater values after the visitor submits a form, you can change `queryForm()` to `queryForm({reset: true})`.
 
 ## Example
 
@@ -59,9 +53,6 @@ queryForm({reset: true});
   </form>
 
   <script src="path-to-script/sup.min.js"></script>
-  <script>
-  queryForm();
-  </script>
 </body>
 </html>
 ```
