@@ -34,6 +34,14 @@ This script captures and saves *any* parameter in the URL, then inserts the valu
 
 (Where `path-to-script` is the location of the script.)
 
+Or you can load the script directly from GitHub:
+
+```
+
+<script src="https://cdn.jsdelivr.net/gh/gkogan/sup-save-url-parameters/sup.min.js"></script>
+
+```
+
 That's it!
 
 If you want to reset (clear) saved paramater values after the visitor submits a form, you can change `queryForm()` to `queryForm({reset: true})`.
