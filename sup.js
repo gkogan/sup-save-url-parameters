@@ -21,7 +21,13 @@ var queryForm = function(settings){
   var hiddenFields = document.querySelectorAll("input[type=hidden], input[type=text]");
   for (var i=0; i<hiddenFields.length; i++) {
     var param = sessionStorage.getItem(hiddenFields[i].name);
-    if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
+    if (param) {
+       
+       const fields = document.getElementsByName(hiddenFields[i].name)
+       
+       for(let j = 0; j < fields.length; j++) {
+           fields[j].value = param;
+       }
   }
 }
 
